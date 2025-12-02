@@ -1,0 +1,35 @@
+{
+  "log_format": "apache",
+  "output_format": "csv",
+  "date_format": "iso8601",
+  "timezone": "UTC",
+  "max_file_size_mb": 5000,
+  "buffer_size_kb": 1024,
+  "json_options": {
+    "pretty_print": true,
+    "include_metadata": true,
+    "include_summary": true,
+    "timestamp_format": "iso8601",
+    "indent_spaces": 2,
+    "field_mappings": {
+      "response_time": "response_time_ms",
+      "status": "status_code"
+    }
+  },
+  "csv_options": {
+    "delimiter": ",",
+    "include_headers": true,
+    "quote_strings": true
+  },
+  "xml_options": {
+    "root_element": "logs",
+    "entry_element": "entry",
+    "pretty_print": true,
+    "include_declaration": true
+  },
+  "filter_defaults": {
+    "min_response_time": 0,
+    "max_response_time": 30000,
+    "exclude_status_codes": []
+  }
+}
